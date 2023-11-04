@@ -23,18 +23,173 @@ a {
 
 .main .container {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  padding: 45px 0;
 }
 .main .container .logo {
   height: 25px;
+  cursor: pointer;
 }
 .main .container .logo img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .container .menu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .main .container .menu {
+    display: block;
+  }
 }
 .main .container .menu ul {
   display: flex;
+  margin: 0;
 }
 .main .container .menu ul li {
-  padding: 15px;
+  padding: 0 25px;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.main .container .menu ul li a {
+  position: relative;
+}
+.main .container .menu ul li a::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s ease;
+}
+.main .container .menu ul li a:hover::before {
+  width: 100%;
+}
+.main .container .menu ul li .menu-item {
+  position: absolute;
+  z-index: -1;
+  top: 60px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 17px 0;
+  min-width: 200px;
+  background-color: #fff;
+  transition: 0.3s ease;
+  visibility: hidden;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+.main .container .menu ul li .menu-item li {
+  padding: 10px 20px;
+}
+.main .container .menu ul li .menu-item li a {
+  color: #737373;
+}
+.main .container .menu ul li .menu-item li a::before {
+  background-color: #737373;
+}
+.main .container .menu ul li #shop {
+  position: absolute;
+  z-index: -1;
+  top: 60px;
+  left: -470px;
+  right: -550px;
+  display: flex;
+  transition: 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  background-color: #fff;
+}
+.main .container .menu ul li #shop div {
+  width: 25%;
+  padding: 40px 10px;
+}
+.main .container .menu ul li #shop div h3 {
+  color: rgba(0, 0, 0, 0.651);
+}
+.main .container .menu ul li #shop div .submenu {
+  margin: 0;
+  padding: 0;
+}
+.main .container .menu ul li #shop div .submenu li {
+  padding: 10px 10px;
+  color: #737373;
+}
+.main .container .menu ul li #shop div .submenu li a {
+  color: #737373;
+}
+.main .container .menu ul li #shop div .submenu li a::before {
+  background-color: #737373;
+}
+.main .container .menu ul li:hover ul {
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
+}
+.main .container .menu ul li:hover #shop {
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
+}
+.main .container .basket {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .main .container .basket {
+    display: block;
+  }
+  .main .container .basket #close {
+    color: red !important;
+  }
+}
+.main .container .basket i {
+  padding: 0 12px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.726);
+  position: relative;
+  cursor: pointer;
+}
+.main .container .basket i .numb {
+  position: absolute;
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+  background-color: red;
+  padding: 2px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  color: #fff;
+  right: 8px;
+}
+.main .container .basket i:first-child:hover {
+  color: rgba(255, 0, 0, 0.781);
+}
+.main .container .basket .cart {
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+.main .container .btn {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .main .container .btn {
+    display: none;
+  }
+}
+
+.sli .container {
+  background-color: blueviolet;
 }/*# sourceMappingURL=style.css.map */
