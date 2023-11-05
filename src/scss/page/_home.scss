@@ -84,6 +84,56 @@
                     }
                 }
             }
+            .filter{
+                position: relative;
+                
+                    z-index: 1;
+                    h2{
+                        a{
+                            font-size: 12px;
+                            color: #1b1b1b;
+                        }
+                        i{
+                            font-size: 15px;
+                            padding: 0 5px;
+                        }
+                    }
+
+                    .sort{
+                        position: absolute;
+                        z-index: -1;
+                        left: -200px;
+                        opacity: 0;
+                        visibility: hidden;
+                        display: flex;
+                        background-color: #fff;
+                        width: 350px;
+                        div{
+                            padding: 10px 20px;
+                            h3{
+                                font-size: 20px;
+                                padding: 10px 0;
+                            }
+                            ul{
+                                li{
+                                    font-size: 14px;
+                                    padding: 5px 0;
+                                }
+                            }
+                        }
+                        
+                    }
+
+               
+            }
+            .filter:hover{
+                .sort{
+                    z-index: 1;
+                    opacity: 1;
+                    visibility: visible;
+                    
+                }
+            }
         }
         .cards{
             padding: 20px 0;
@@ -92,19 +142,36 @@
                 .image{
                     // overflow: hidden;
                     cursor: pointer;
+                    position: relative;
                     img{
                         @include photo();
                         transition: .3s ease;
 
                     }
+                    .sold{
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        background-color: rgba(0, 0, 0, 0.788);
+                        color: #fff;
+                        padding: 3px 12px;
+                    }
+                    .sale{
+                        @extend .sold;
+                        background-color: #fff;
+                        color: #1b1b1b;
+                    }
                 }
                 .image:hover{
-                    // overflow: visible;
+                    
                     img{
                         scale: 1.05;
                     }
+
                 }
                 .text{
+                   
+                    
                     h2{
                         font-weight: 300;
                         font-size: 15px;
@@ -114,13 +181,63 @@
                     }
 
                     p{
+                       @include center();
                         color: $fontColor();
                         text-align: center;
                         font-size: 12px;
                         cursor: pointer;
-
+                        overflow: hidden;
+                        position: relative;
+                        z-index: 1;
+                        .pay{
+                            position: absolute;
+                            transform: translateX(-1000px);
+                            transition: .5s ease;
+                        }
+                        .pay:hover{
+                            color: red;
+                        }
+                        .price{
+                            position: relative;
+                           transition: .5s ease;
+                           top: 0;
+                           left: 0;
+                            // opacity: 1;
+                            // visibility: visible;
+                            // transform: translateX(0px);
+                        }
+                        
+                       
                     }
+                    p:hover .pay{
+                        transform: translateX(0);
+                        top: 0;
+                        
+                    }
+                    p:hover .price{
+                        // transform: translateX(1000px);
+                        left: 200px;
+                    }
+
                 }
+            }
+        }
+    }
+}
+
+.valentine{
+    background-color: grey;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+        .play{
+            overflow: hidden;
+            padding: 0 20px;
+            img{
+                @include photo();
             }
         }
     }
