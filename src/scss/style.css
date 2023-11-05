@@ -10,6 +10,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
+  color: #1b1b1b;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -19,6 +25,7 @@ li {
 a {
   text-decoration: none;
   color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main .container {
@@ -39,6 +46,8 @@ a {
 }
 .main .container .menu {
   display: none;
+  position: relative;
+  z-index: 2;
 }
 @media (min-width: 1024px) {
   .main .container .menu {
@@ -75,7 +84,7 @@ a {
 }
 .main .container .menu ul li .menu-item {
   position: absolute;
-  z-index: -1;
+  z-index: 3;
   top: 60px;
   left: 0px;
   display: flex;
@@ -100,7 +109,7 @@ a {
 }
 .main .container .menu ul li #shop {
   position: absolute;
-  z-index: -1;
+  z-index: 4;
   top: 60px;
   left: -470px;
   right: -550px;
@@ -132,15 +141,17 @@ a {
 .main .container .menu ul li #shop div .submenu li a::before {
   background-color: #737373;
 }
-.main .container .menu ul li:hover ul {
+.main .container .menu ul li:hover .menu-item {
   transform: translateY(0px);
   visibility: visible;
   opacity: 1;
+  z-index: 1 !important;
 }
 .main .container .menu ul li:hover #shop {
   transform: translateY(0px);
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 }
 .main .container .basket {
   display: none;
@@ -190,6 +201,95 @@ a {
   }
 }
 
-.sli .container {
-  background-color: blueviolet;
+.flowers .container-fluid .mainSlider {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+.flowers .container-fluid .mainSlider .content {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+}
+.flowers .container-fluid .mainSlider .content h2 {
+  font-size: 45px;
+  padding: 15px 0;
+}
+.flowers .container-fluid .mainSlider .content h2 span {
+  color: red;
+}
+.flowers .container-fluid .mainSlider .content p {
+  line-height: 30px;
+}
+.flowers .container-fluid .mainSlider .swiper-wrapper {
+  position: relative;
+}
+.flowers .container-fluid .mainSlider .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flowers .container-fluid .mainSlider .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .container {
+  padding: 50px 0;
+}
+.products .container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products .container .title .category ul {
+  display: flex;
+}
+.products .container .title .category ul li {
+  padding: 0 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.products .container .title .category ul li:first-child {
+  color: red;
+}
+.products .container .title .category ul li:hover {
+  color: red;
+}
+.products .container .cards {
+  padding: 20px 0;
+}
+.products .container .cards .inner .image {
+  cursor: pointer;
+}
+.products .container .cards .inner .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease;
+}
+.products .container .cards .inner .image:hover img {
+  scale: 1.05;
+}
+.products .container .cards .inner .text h2 {
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+  padding: 17px 0 5px;
+}
+.products .container .cards .inner .text p {
+  color: #737373;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

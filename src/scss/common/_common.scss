@@ -6,10 +6,17 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Playfair Display', serif;
+    color: #1b1b1b;
+}
+
+ul,ol{
+    margin: 0;
+    padding: 0;
 }
 li{
    list-style: none;
@@ -18,4 +25,5 @@ li{
 a{
     text-decoration: none;
     color: black;
+    font-family: 'Montserrat', sans-serif;
 }
