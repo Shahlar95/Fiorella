@@ -10,7 +10,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
-  color: #1b1b1b;
+  color: #2b2b2b;
+}
+
+h1, h2 {
+  font-size: 38px;
 }
 
 ul, ol {
@@ -330,7 +334,7 @@ a {
   color: #1b1b1b;
 }
 .products .container .cards .inner .image:hover img {
-  scale: 1.05;
+  scale: 1.03;
 }
 .products .container .cards .inner .text h2 {
   font-weight: 300;
@@ -373,21 +377,88 @@ a {
 }
 
 .valentine {
-  background-color: grey;
+  background-color: rgb(238, 238, 238);
 }
 .valentine .container {
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
 }
 .valentine .container .play {
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 30px;
+  position: relative;
 }
 .valentine .container .play img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.valentine .container .play .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.valentine .container .play .play-icon i {
+  font-size: 45px;
+  color: #f34f3f;
+}
+.valentine .container .valentin-content {
+  padding: 0 30px;
+  font-size: 17px;
+  line-height: 40px;
+}
+.valentine .container .valentin-content h2 {
+  padding: 15px 0;
+  font-size: 38px;
+  line-height: 50px;
+}
+.valentine .container .valentin-content h2 span {
+  color: #f34f3f;
+}
+.valentine .container .valentin-content ul li span {
+  padding: 0 10px;
+}
+
+.experts .container {
+  padding: 50px 0;
+}
+.experts .container .experts-header {
+  text-align: center;
+}
+.experts .container .experts-header p {
+  padding: 30px 0px;
+  font-size: 17px;
+  line-height: 30px;
+}
+.experts .container .boxes .inner .img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.experts .container .boxes .inner .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.experts .container .boxes .inner .box-content {
+  text-align: center;
+}
+.experts .container .boxes .inner .box-content h6 {
+  font-size: 12px;
+  padding: 20px 0 0;
+}
+.experts .container .boxes .inner .box-content p {
+  font-size: 12px;
+  color: #afafaf;
 }/*# sourceMappingURL=style.css.map */

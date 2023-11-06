@@ -165,7 +165,7 @@
                 .image:hover{
                     
                     img{
-                        scale: 1.05;
+                        scale: 1.03;
                     }
 
                 }
@@ -226,18 +226,102 @@
 }
 
 .valentine{
-    background-color: grey;
-
+    background-color: rgb(238,238,238);
+    
     .container{
+        min-height: 100vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 50px 0;
+       
         .play{
             overflow: hidden;
-            padding: 0 20px;
+            padding: 0 30px;
+            position: relative;
             img{
                 @include photo();
+            }
+            .play-icon{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                @include center();
+
+                i{
+                    
+                    font-size: 45px;
+                    color: $mainColor();
+                }
+            }
+        }
+
+        .valentin-content{
+            padding: 0 30px;
+            font-size: 17px;
+            line-height: 40px;
+
+            h2{
+                padding: 15px 0;
+                font-size: 38px;
+                line-height: 50px;
+                
+                span{
+                    color: $mainColor();
+                }
+            }
+            ul{
+                li{
+                    span{
+                        padding: 0 10px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.experts{
+    .container{
+        padding: 50px 0;
+      
+        .experts-header{
+            text-align: center;
+
+            p{
+                padding: 30px 0px;
+                font-size: 17px;
+                line-height: 30px;
+                
+            }
+        }
+        .boxes{
+            .inner{
+                .img{
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        @include photo();
+                    }
+                }
+                .box-content{
+                    text-align: center;
+                    h6{
+                        font-size: 12px;
+                        padding: 20px 0 0;
+
+
+                    }
+                    p{
+                        font-size: 12px;
+                        color: #afafaf;
+                    }
+                }
             }
         }
     }
