@@ -326,3 +326,103 @@
         }
     }
 }
+
+.subscribe{
+    .container-fluid{
+        min-height: 70vh;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include center();
+        flex-direction: column;
+        h2{
+            
+            
+            padding: 50px 0;
+            color: #fff;
+        }
+
+        .enter-email{
+            display: flex;
+
+            .email-write{
+                background-color: #fff;
+                width: 400px;
+                padding: 20px 0;
+                input{
+                    border: none;
+                    padding: 0 15px;
+                }::placeholder{
+                    font-size: 12px;
+                }
+                input:focus {
+                    outline: none;
+                }
+            }
+           .subscribe-btn{
+            button{
+                border: none;
+                background-color: $mainColor();
+                padding: 25px 50px;
+                font-size: 12px;
+                color: #fff;
+            }
+           }
+        }
+    }
+}
+
+.blog{
+    background-color: rgb(238,238,238);
+    // background-color: lightgray;
+    .container{
+        padding: 50px 0;
+
+        .blog-title{
+            text-align: center;
+            padding: 40px 0;
+        }
+        .blog-cards{
+            .inner{
+                .blog-image{
+                    overflow: hidden;
+                    position: relative;
+
+                    img{
+                        @include photo();
+                        transition: .3s ease;
+
+                    }
+                    .blog-date{
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        background-color: #fff;
+                        font-size: 12px;
+                        padding: 5px 20px;
+                        cursor: pointer;
+                    }:hover{
+                        color: $mainColor();
+                    }
+                }
+                .blog-image:hover{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+                .blog-card-text{
+                    text-align: center;
+                    padding: 15px;
+                    h2{
+                        a{
+                            font-size: 22px;
+                        }
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
