@@ -1,3 +1,9 @@
+.map{
+    .container-fluid{
+        padding-bottom: 70px;
+    }
+}
+
 .message{
     .container{
         display: flex;
@@ -46,11 +52,11 @@
                 flex-direction: column;
                 
                 input{
-                    padding: 15px 0;
+                    padding: 15px 15px;
                     margin: 12px 0;
                     border: 1px solid rgba(128, 128, 128, 0.253);
                 }::placeholder{
-                    padding-left: 15px;
+                    // padding-left: 15px;
                     font-size: 12px;
                 }
 
@@ -61,9 +67,9 @@
                 .write-some{
                     margin: 12px 0; 
                     border: 1px solid rgba(128, 128, 128, 0.253);
-                    
+                    padding: 10px 10px;
                 }::placeholder{
-                    // padding: 10px 10px;
+                
                     font-size: 12px;
                 }
 

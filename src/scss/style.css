@@ -666,6 +666,10 @@ footer .container .short-info .sosial a {
   color: #f34f3f;
 }
 
+.map .container-fluid {
+  padding-bottom: 70px;
+}
+
 .message .container {
   display: flex;
   padding: 50px 0;
@@ -718,16 +722,14 @@ footer .container .short-info .sosial a {
   flex-direction: column;
 }
 .message .container .enter-message .enter-write input {
-  padding: 15px 0;
+  padding: 15px 15px;
   margin: 12px 0;
   border: 1px solid rgba(128, 128, 128, 0.253);
 }
 .message .container .enter-message .enter-write ::-moz-placeholder {
-  padding-left: 15px;
   font-size: 12px;
 }
 .message .container .enter-message .enter-write ::placeholder {
-  padding-left: 15px;
   font-size: 12px;
 }
 .message .container .enter-message .enter-write input:focus {
@@ -736,6 +738,7 @@ footer .container .short-info .sosial a {
 .message .container .enter-message .enter-write .write-some {
   margin: 12px 0;
   border: 1px solid rgba(128, 128, 128, 0.253);
+  padding: 10px 10px;
 }
 .message .container .enter-message .enter-write ::-moz-placeholder {
   font-size: 12px;
