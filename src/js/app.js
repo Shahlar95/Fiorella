@@ -2,14 +2,30 @@ var swiper = new Swiper(".mainSlider", {
     // cssMode: true,
     spaceBetween: 30,
       effect: "fade",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     loop:true,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
+   
+  
     keyboard: true,
+  });
+
+  var swiper2 = new Swiper(".twoSlider", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop:true
   });

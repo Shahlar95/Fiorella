@@ -1,0 +1,84 @@
+.message{
+    .container{
+        display: flex;
+        padding: 50px 0;
+        .text{
+            width: 50%;
+            @include center();
+            flex-direction: column;
+            background-color: rgba(236, 235, 235, 0.603);
+            padding: 50px 50px;
+            text-align: center;
+            .image{
+                overflow: hidden;
+                img{
+                    @include photo();
+                }
+
+            }
+            h2{
+                text-align: center;
+                span{
+                    color: $mainColor();
+                    padding: 15px 0;
+                    line-height: 50px;
+                }
+            }
+            p{
+                padding: 15px 0;
+                font-weight: 400;
+            }
+        }
+        .enter-message{
+            width: 50%;
+            // @include center();
+            flex-direction: column;
+            padding: 50px;
+            text-align: left;
+            h2{
+                padding: 15px 0;
+            }
+            p{
+                font-size: 14px;
+            }
+            .enter-write{
+                display: flex;
+                flex-direction: column;
+                
+                input{
+                    padding: 15px 0;
+                    margin: 12px 0;
+                    border: 1px solid rgba(128, 128, 128, 0.253);
+                }::placeholder{
+                    padding-left: 15px;
+                    font-size: 12px;
+                }
+
+                input:focus{
+                     outline:none;
+                }
+
+                .write-some{
+                    margin: 12px 0; 
+                    border: 1px solid rgba(128, 128, 128, 0.253);
+                    
+                }::placeholder{
+                    // padding: 10px 10px;
+                    font-size: 12px;
+                }
+
+                .write-some:focus{
+                    outline:none;
+                }   
+               
+            }
+            button{
+                padding: 20px 30px;
+                margin: 20px 0;
+                background-color: $mainColor();
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+}
