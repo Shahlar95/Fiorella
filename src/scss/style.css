@@ -17,6 +17,11 @@ h1, h2 {
   font-size: 38px;
 }
 
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
 ul, ol {
   margin: 0;
   padding: 0;
@@ -149,7 +154,7 @@ a {
   transform: translateY(0px);
   visibility: visible;
   opacity: 1;
-  z-index: 1 !important;
+  z-index: 1;
 }
 .main .container .menu ul li:hover #shop {
   transform: translateY(0px);
@@ -157,25 +162,38 @@ a {
   opacity: 1;
   z-index: 1;
 }
-.main .container .basket {
+.main .container .menu-right {
   display: none;
 }
 @media (min-width: 1024px) {
-  .main .container .basket {
+  .main .container .menu-right {
     display: block;
   }
-  .main .container .basket #close {
+  .main .container .menu-right #close {
     color: red !important;
   }
 }
-.main .container .basket i {
+.main .container .menu-right i {
   padding: 0 12px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.726);
   position: relative;
   cursor: pointer;
 }
-.main .container .basket i .numb {
+.main .container .menu-right #search:hover {
+  color: rgba(255, 0, 0, 0.781);
+}
+.main .container .menu-right .basket {
+  position: relative;
+}
+.main .container .menu-right .basket i {
+  padding: 0 12px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.726);
+  position: relative;
+  cursor: pointer;
+}
+.main .container .menu-right .basket i .numb {
   position: absolute;
   font-size: 8px;
   font-weight: bold;
@@ -188,13 +206,27 @@ a {
   color: #fff;
   right: 8px;
 }
-.main .container .basket i:first-child:hover {
-  color: rgba(255, 0, 0, 0.781);
-}
-.main .container .basket .cart {
+.main .container .menu-right .basket .cart {
   font-size: 13px;
   cursor: pointer;
-  padding: 0 12px;
+  padding: 0 6px;
+}
+.main .container .menu-right .basket .basket-notification {
+  position: absolute;
+  z-index: 3;
+  top: 60px;
+  left: -120px;
+  min-width: 250px;
+  padding: 20px 25px;
+  background-color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.main .container .menu-right .basket:hover .basket-notification {
+  opacity: 1;
+  visibility: visible;
 }
 .main .container .btn {
   display: block;
@@ -266,6 +298,18 @@ footer .container .short-info .sosial a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.flowers .container-fluid .mainSlider .swiper-button-prev::after,
+.flowers .container-fluid .mainSlider .swiper-button-next::after {
+  display: none;
+}
+.flowers .container-fluid .mainSlider .swiper-button-prev i {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.349);
+}
+.flowers .container-fluid .mainSlider .swiper-button-next i {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.349);
 }
 
 .products .container {

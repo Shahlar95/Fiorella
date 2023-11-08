@@ -132,7 +132,7 @@
                             transform: translateY(0px) ;
                             visibility: visible;
                              opacity: 1;
-                             z-index: 1 !important;
+                             z-index: 1 ;
                         
                     }
                     li:hover  #shop {
@@ -147,7 +147,7 @@
                    
                 }
             }
-            .basket{
+            .menu-right{
                display: none;
                @media (min-width: 1024px) {
                 display: block;
@@ -162,30 +162,61 @@
                     position: relative;
                     cursor: pointer;
     
-                    .numb{
-                        position: absolute;
-                        font-size: 8px;
-                        font-weight: bold;
-                        text-align: center;
-                        background-color: red;
-                        padding: 2px;
-                        width: 13px;
-                        height: 13px;
-                        border-radius: 50%;
-                        color: #fff;
-                        right: 8px;
-                     
-                    }
+                    
                 }
-                i:first-child:hover{
+               #search:hover{
                     color: rgba(255, 0, 0, 0.781);
                 }
     
-                .cart{
-                    font-size: 13px;
-                    cursor: pointer;
-                    padding: 0 12px;
+               
+                .basket{
+                    position: relative;
+                    i{
+                        padding: 0 12px;
+                        font-size: 20px;
+                        color: rgba(0, 0, 0, 0.726);
+                        position: relative;
+                        cursor: pointer;
+        
+                        .numb{
+                            position: absolute;
+                            font-size: 8px;
+                            font-weight: bold;
+                            text-align: center;
+                            background-color: red;
+                            padding: 2px;
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 50%;
+                            color: #fff;
+                            right: 8px;
+                         
+                        }
+                    }
+                    .cart{
+                        font-size: 13px;
+                        cursor: pointer;
+                        padding: 0 6px;
+                    }
+                    .basket-notification{
+                        position: absolute;
+                        z-index: 3;
+                        top: 60px;
+                        left: -120px;
+                        min-width: 250px;
+                        padding: 20px 25px;
+                        background-color: #fff;
+                        font-size: 14px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .3s ease;
+                    }
+                  
                 }
+                .basket:hover  .basket-notification{
+                    opacity: 1;
+                    visibility: visible;
+                    }
             }
             .btn{
                 display: block;

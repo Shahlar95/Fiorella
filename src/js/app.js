@@ -29,3 +29,10 @@ var swiper = new Swiper(".mainSlider", {
     },
     loop:true
   });
+
+  const swiperEl = document.querySelector('.mainSlider');
+  const buttonEl = document.querySelector('i');
+
+  buttonEl.addEventListener('click', () => {
+    swiperEl.swiper.slideNext();
+  });
