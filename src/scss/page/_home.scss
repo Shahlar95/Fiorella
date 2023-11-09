@@ -46,22 +46,30 @@
                       }
                      
                   }
-              
                   .swiper-button-prev::after,
                   .swiper-button-next::after {
                     display: none;
                   }
-                  
-                  .swiper-button-prev i {
-                    font-size: 40px;
-                    color: rgba(0, 0, 0, 0.349);
+                  .swiper-button-next span svg,
+                    .swiper-button-prev span svg{
+                        display: none;
+                    }
+                  @media (min-width: 1024px) {
+                    .swiper-button-prev::after,
+                    .swiper-button-next::after {
+                      display: none;
+                    }
                     
-                    
+                   
+                    .swiper-button-next span svg,
+                    .swiper-button-prev span svg{
+                      width: 40px;
+                      height: 50px;
+                      fill: rgba(0, 0, 0, 0.452);;
+                      color: rgba(0, 0, 0, 0.452);
+                    }
                   }
-                  .swiper-button-next i {
-                    font-size: 40px;
-                    color: rgba(0, 0, 0, 0.349);
-                  }
+                 
             }
           
            
@@ -83,21 +91,33 @@
             align-items: center;
 
             .category{
-                
-
-                ul{
-                    display: flex;
-                    
-                    li{
-                       padding: 0 15px;
-                       font-size: 12px;
-                       cursor: pointer;
+                .category-mobile{
+                    display: block;
+                }
+                @media (min-width: 1024px) {
+                    .category-mobile{
+                        display: none;
                     }
-                    li:first-child{
-                        color: red;
-                    }
-                    li:hover{
-                        color: red;
+                }
+               
+                .category-name{
+                    display: none;
+                }
+                @media (min-width: 1024px) {
+                    .category-name{
+                        display: flex;
+                        
+                        li{
+                           padding: 0 15px;
+                           font-size: 12px;
+                           cursor: pointer;
+                        }
+                        li:first-child{
+                            color: red;
+                        }
+                        li:hover{
+                            color: red;
+                        }
                     }
                 }
             }
@@ -243,13 +263,20 @@
 }
 
 .valentine{
-    background-color: rgb(238,238,238);
+    background-color: rgba(236, 235, 235, 0.603);
     
     .container{
         min-height: 100vh;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
+        padding: 70px 0;
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
        
         .play{
             overflow: hidden;
@@ -390,8 +417,7 @@
 }
 
 .blog{
-    background-color: rgb(238,238,238);
-    // background-color: lightgray;
+    background-color: rgba(236, 235, 235, 0.603);
     .container{
         padding: 50px 0;
 
@@ -472,6 +498,19 @@
               }
               .swiper-button-prev{
                 color: #1b1b1b;
+              }
+              .swiper-button-prev::after,
+              .swiper-button-next::after {
+                display: none;
+              }
+              
+             
+              .swiper-button-next span svg,
+              .swiper-button-prev span svg{
+                width: 40px;
+                height: 50px;
+                fill: rgba(0, 0, 0, 0.452);;
+                color: rgba(0, 0, 0, 0.452);
               }
           }
       
