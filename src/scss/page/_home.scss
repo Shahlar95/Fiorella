@@ -13,7 +13,7 @@
                 top: 50%;
                 left: 25%;
                 transform: translate(-50%, -50%);
-                width: 30%;
+                max-width: 30%;
                 
                 h2{
                     font-size: 45px;
@@ -23,7 +23,13 @@
                     }
                 }
                 p{
-                    line-height: 30px;
+                   display: none;
+                }
+                @media (min-width: 600px) {
+                    p{
+                        display: block;
+                        line-height: 30px;
+                    }
                 }
             }
          
@@ -63,6 +69,7 @@
                    
                     .swiper-button-next span svg,
                     .swiper-button-prev span svg{
+                        display: block;
                       width: 40px;
                       height: 50px;
                       fill: rgba(0, 0, 0, 0.452);;
@@ -93,7 +100,39 @@
             .category{
                 .category-mobile{
                     display: block;
+                    position: relative;
+
+                    h2{
+                        font-size: 12px;
+                            color: #1b1b1b;
+                            i{
+                                font-size: 15px;
+                                padding: 0 5px; 
+                            }
+                    }
+
+                    .category-name-mobile{
+                        position: absolute;
+                        z-index: -1;
+                        top: 20px;
+                        left: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        background-color: #fff;
+                        width: 200px;
+                        li{
+                            font-size: 12px;
+                            padding:  10px 0;
+                        }
+
+                    }
+                   
                 }
+                 .category-mobile:hover .category-name-mobile{
+                        z-index: 1;
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 @media (min-width: 1024px) {
                     .category-mobile{
                         display: none;
@@ -126,10 +165,10 @@
                 
                     z-index: 1;
                     h2{
-                        a{
+                    
                             font-size: 12px;
                             color: #1b1b1b;
-                        }
+                        
                         i{
                             font-size: 15px;
                             padding: 0 5px;
@@ -276,6 +315,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-direction: row;
         }
        
         .play{
@@ -347,7 +387,7 @@
         .boxes{
             .inner{
                 .img{
-                    border-radius: 50%;
+                   @include center();
                     overflow: hidden;
                     img{
                         @include photo();
@@ -381,17 +421,19 @@
         flex-direction: column;
         h2{
             
-            
+            text-align: center;
             padding: 50px 0;
             color: #fff;
         }
 
         .enter-email{
             display: flex;
+            flex-direction: column;
+
 
             .email-write{
                 background-color: #fff;
-                width: 400px;
+                max-width: 400px;
                 padding: 20px 0;
                 input{
                     border: none;
@@ -404,6 +446,8 @@
                 }
             }
            .subscribe-btn{
+            
+            background-color: $mainColor();
             button{
                 border: none;
                 background-color: $mainColor();
@@ -413,6 +457,26 @@
             }
            }
         }
+
+        @media (min-width: 500px) {
+            .enter-email{display: flex;
+            flex-direction: row;
+            .subscribe-btn{
+                
+            
+           
+                button{
+                border: none;
+                background-color: $mainColor();
+                padding: 25px 50px;
+                font-size: 12px;
+                color: #fff;
+                }
+             
+            }
+        }
+        
+    }
     }
 }
 
