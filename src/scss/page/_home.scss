@@ -306,9 +306,7 @@
     
     .container{
         min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center();
         flex-direction: column;
         padding: 70px 0;
         @media (min-width: 1024px) {
@@ -571,11 +569,25 @@
              
               .swiper-button-next span svg,
               .swiper-button-prev span svg{
-                width: 40px;
-                height: 50px;
-                fill: rgba(0, 0, 0, 0.452);;
-                color: rgba(0, 0, 0, 0.452);
+               display: none;
               }
+              @media (min-width: 1024px) {
+                .swiper-button-prev::after,
+                .swiper-button-next::after {
+                  display: none;
+                }
+                
+               
+                .swiper-button-next span svg,
+                .swiper-button-prev span svg{
+                    display: block;
+                  width: 40px;
+                  height: 50px;
+                  fill: rgba(0, 0, 0, 0.452);;
+                  color: rgba(0, 0, 0, 0.452);
+                }
+              }
+             
           }
       
           

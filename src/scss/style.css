@@ -745,10 +745,21 @@ footer .container .short-info .sosial a {
 }
 .experts-slider .container .twoSlider .swiper-button-next span svg,
 .experts-slider .container .twoSlider .swiper-button-prev span svg {
-  width: 40px;
-  height: 50px;
-  fill: rgba(0, 0, 0, 0.452);
-  color: rgba(0, 0, 0, 0.452);
+  display: none;
+}
+@media (min-width: 1024px) {
+  .experts-slider .container .twoSlider .swiper-button-prev::after,
+  .experts-slider .container .twoSlider .swiper-button-next::after {
+    display: none;
+  }
+  .experts-slider .container .twoSlider .swiper-button-next span svg,
+  .experts-slider .container .twoSlider .swiper-button-prev span svg {
+    display: block;
+    width: 40px;
+    height: 50px;
+    fill: rgba(0, 0, 0, 0.452);
+    color: rgba(0, 0, 0, 0.452);
+  }
 }
 
 .about-us .container-fluid {
@@ -765,14 +776,28 @@ footer .container .short-info .sosial a {
 .about-valentine .container {
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .about-valentine .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 .about-valentine .container .valentin-content {
-  width: 50%;
+  width: 100%;
   padding: 0 10px;
   font-size: 17px;
   line-height: 30px;
+}
+@media (min-width: 1024px) {
+  .about-valentine .container .valentin-content {
+    width: 50%;
+  }
 }
 .about-valentine .container .valentin-content h2 {
   padding: 15px 0;
@@ -787,16 +812,20 @@ footer .container .short-info .sosial a {
   padding: 15px 0;
 }
 .about-valentine .container .play {
-  width: 50%;
+  width: 100%;
   overflow: hidden;
-  padding: 0 30px;
+  padding: 50px 0px;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .about-valentine .container .play {
+    width: 50%;
+    padding: 0 30px;
+  }
+}
 .about-valentine .container .play img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .about-valentine .container .play .play-icon {
   position: absolute;
@@ -822,10 +851,17 @@ footer .container .short-info .sosial a {
 
 .message .container {
   display: flex;
+  flex-direction: column;
   padding: 50px 0;
 }
+@media (min-width: 1024px) {
+  .message .container {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .message .container .text {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -833,6 +869,11 @@ footer .container .short-info .sosial a {
   background-color: rgba(236, 235, 235, 0.603);
   padding: 50px 50px;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .message .container .text {
+    width: 50%;
+  }
 }
 .message .container .text .image {
   overflow: hidden;
@@ -856,10 +897,15 @@ footer .container .short-info .sosial a {
   font-weight: 400;
 }
 .message .container .enter-message {
-  width: 50%;
+  width: 100%;
   flex-direction: column;
   padding: 50px;
   text-align: left;
+}
+@media (min-width: 1024px) {
+  .message .container .enter-message {
+    width: 50%;
+  }
 }
 .message .container .enter-message h2 {
   padding: 15px 0;
