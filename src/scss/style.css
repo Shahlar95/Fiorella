@@ -262,6 +262,26 @@ a {
     display: block;
   }
 }
+.main .container .accordion .accordion-item {
+  border: none;
+  color: #737373;
+  font-size: 15px;
+  padding: 15px 30px;
+}
+.main .container .accordion .accordion-item i {
+  font-size: 15px;
+  margin: 0 5px;
+  color: #737373;
+}
+.main .container .accordion .accordion-item h2:focus {
+  outline: none;
+}
+.main .container .accordion .accordion-item button {
+  padding: 0;
+}
+.main .container .accordion .accordion-item button:after {
+  display: none;
+}
 
 footer {
   background-color: rgba(255, 205, 205, 0.288);
@@ -289,6 +309,7 @@ footer .container .short-info .sosial a {
   height: 500px;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 .flowers .container-fluid .mainSlider .content {
   position: absolute;
@@ -354,10 +375,15 @@ footer .container .short-info .sosial a {
   }
 }
 
+.products {
+  padding: 50px 0;
+}
 .products .container .title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+.products .container .title .category {
+  display: flex;
 }
 .products .container .title .category .category-mobile {
   display: block;
@@ -371,19 +397,21 @@ footer .container .short-info .sosial a {
   font-size: 15px;
   padding: 0 5px;
 }
-.products .container .title .category .category-mobile .category-name-mobile {
-  position: absolute;
-  z-index: -1;
-  top: 20px;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  background-color: #fff;
-  width: 200px;
-}
 .products .container .title .category .category-mobile .category-name-mobile li {
   font-size: 12px;
   padding: 10px 0;
+}
+.products .container .title .category .category-mobile .accordion .accordion-item {
+  border: none;
+}
+.products .container .title .category .category-mobile .accordion .accordion-item h2:focus {
+  outline: none;
+}
+.products .container .title .category .category-mobile .accordion .accordion-item button {
+  padding: 0;
+}
+.products .container .title .category .category-mobile .accordion .accordion-item button:after {
+  display: none;
 }
 .products .container .title .category .category-mobile:hover .category-name-mobile {
   z-index: 1;
@@ -428,13 +456,12 @@ footer .container .short-info .sosial a {
 }
 .products .container .title .filter .sort {
   position: absolute;
-  z-index: -1;
-  left: -200px;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   display: flex;
   background-color: #fff;
-  width: 350px;
+  max-width: 350px;
 }
 .products .container .title .filter .sort div {
   padding: 10px 20px;
@@ -518,7 +545,7 @@ footer .container .short-info .sosial a {
   top: 0;
 }
 .products .container .cards .inner .text p:hover .price {
-  left: 200px;
+  left: 1000px;
 }
 
 .valentine {
@@ -641,7 +668,7 @@ footer .container .short-info .sosial a {
 }
 .subscribe .container-fluid .enter-email .email-write {
   background-color: #fff;
-  width: 400px;
+  max-width: 400px;
   padding: 20px 0;
   overflow: hidden;
 }
@@ -664,7 +691,8 @@ footer .container .short-info .sosial a {
 .subscribe .container-fluid .enter-email .subscribe-btn button {
   border: none;
   background-color: #f34f3f;
-  padding: 25px 50px;
+  padding: 25px 0px;
+  width: 100%;
   font-size: 12px;
   color: #fff;
 }
@@ -674,7 +702,7 @@ footer .container .short-info .sosial a {
     flex-direction: row;
   }
   .subscribe .container-fluid .enter-email .email-write {
-    max-width: 18.75rem;
+    min-width: 18.75rem;
   }
   .subscribe .container-fluid .enter-email .subscribe-btn button {
     border: none;

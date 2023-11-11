@@ -246,6 +246,33 @@
     //     width: 100%;
     // }
 }
+.accordion{
+                      
+                       
+    .accordion-item{
+        border: none;
+        color: $fontColor();
+        font-size: 15px;
+        padding: 15px 30px;
+        i{
+            font-size: 15px;
+            margin: 0 5px;
+            color: $fontColor();
+        }
+        h2:focus{
+            outline: none;
+           
+            
+        }
+        button{
+            padding: 0;
+        }
+        button:after{
+            display: none;
+            
+        }
+    }
+}
 
            }
         
