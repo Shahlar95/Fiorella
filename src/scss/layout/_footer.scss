@@ -1,0 +1,27 @@
+footer{
+  background-color: $footerBackground();
+  .container{
+      
+       h2{
+          font-size: 15px;
+          padding: 30px 0 20px;
+       }
+       ul{
+          li{
+              padding: 5px 0;
+              font-size: 12px;
+             a{
+              color: rgb(161, 161, 161);
+             }
+          }
+       }
+       .short-info{
+          color: rgb(161, 161, 161);
+          .sosial{
+              a{
+                  color: rgb(161, 161, 161);
+              }
+          }
+       }
+  }
+}
