@@ -845,7 +845,7 @@ footer .container .short-info .sosial a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @inc flex-direction: row;
+     flex-direction: row;
   }
 }
 .about-valentine .container .valentin-content {
