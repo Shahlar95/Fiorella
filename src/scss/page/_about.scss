@@ -6,6 +6,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         
     }
 }
@@ -19,9 +20,8 @@
         flex-direction: column;
 
         @media (min-width: 1024px) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            
+            @include flex($just:space-between, $aling:center);
             flex-direction: row;
         }
         .valentin-content{

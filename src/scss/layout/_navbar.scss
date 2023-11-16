@@ -2,14 +2,13 @@
    
    
   .container{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      
+      @include flex($just:space-between, $align:center);
       padding: 20px 0;
       @media (min-width: 1024px) {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
+          
+      @include flex($just:space-evenly, $align:center);
+
           padding: 45px 0;
       }
           
@@ -99,6 +98,7 @@
                           left: -470px;
                           right: -550px;
                           display: flex;
+                          @include center();
                           transition:  0.3s ease;
                           visibility: hidden;
                           opacity: 0;
@@ -107,8 +107,10 @@
                           div{
                               width: 25%;
                               padding: 40px 10px;
+                           
                               h3{
                                   color: rgba(0, 0, 0, 0.651);
+                              
                                   
                               }
   
@@ -157,9 +159,7 @@
              display: none;
              @media (min-width: 1024px) {
               display: block;
-              #close{
-                  color: red !important;
-              }
+             
           }
               i{
                   padding: 0 12px;
@@ -171,7 +171,7 @@
                   
               }
              #search:hover{
-                  color: rgba(255, 0, 0, 0.781);
+                  color: $mainColor();
               }
   
              
@@ -189,7 +189,7 @@
                           font-size: 8px;
                           font-weight: bold;
                           text-align: center;
-                          background-color: red;
+                          background-color: $mainColor();
                           padding: 2px;
                           width: 13px;
                           height: 13px;

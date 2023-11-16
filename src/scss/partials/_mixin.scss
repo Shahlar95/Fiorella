@@ -4,6 +4,13 @@
     align-items: center;
 }
 
+@mixin flex($just:null,$align:null,$f-wrap:null){
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+    flex-wrap: $f-wrap;
+}
+
 @mixin photo(){
     max-width: 100%;
     max-height: 100%;

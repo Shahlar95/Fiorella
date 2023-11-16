@@ -45,8 +45,8 @@
         }
         .enter-message{
             width: 100%;
-            // @include center();
-            flex-direction: column;
+
+            
             padding: 50px;
             text-align: left;
             @media (min-width: 1024px) {
@@ -67,7 +67,7 @@
                     margin: 12px 0;
                     border: 1px solid rgba(128, 128, 128, 0.253);
                 }::placeholder{
-                    // padding-left: 15px;
+                    
                     font-size: 12px;
                 }
 
