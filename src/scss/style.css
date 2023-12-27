@@ -139,6 +139,9 @@ a {
   left: -470px;
   right: -550px;
   display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s ease;
   visibility: hidden;
   opacity: 0;
@@ -185,9 +188,6 @@ a {
   .main .container .menu-right {
     display: block;
   }
-  .main .container .menu-right #close {
-    color: red !important;
-  }
 }
 .main .container .menu-right i {
   padding: 0 12px;
@@ -197,7 +197,7 @@ a {
   cursor: pointer;
 }
 .main .container .menu-right #search:hover {
-  color: rgba(255, 0, 0, 0.781);
+  color: #f34f3f;
 }
 .main .container .menu-right .basket {
   position: relative;
@@ -214,7 +214,7 @@ a {
   font-size: 8px;
   font-weight: bold;
   text-align: center;
-  background-color: red;
+  background-color: #f34f3f;
   padding: 2px;
   width: 13px;
   height: 13px;
@@ -845,7 +845,7 @@ footer .container .short-info .sosial a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @inc flex-direction: row;
+    flex-direction: row;
   }
 }
 .about-valentine .container .valentin-content {

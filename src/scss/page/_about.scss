@@ -21,7 +21,7 @@
 
         @media (min-width: 1024px) {
             
-            @include flex($just:space-between, $aling:center);
+            @include flex($just:space-between, $align:center);
             flex-direction: row;
         }
         .valentin-content{
