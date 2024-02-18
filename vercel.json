@@ -1,5 +1,6 @@
 {
-    "source": "/public",
-    "public": "/src"
+    
+    "public": "true",
+    "source": "true"
   }
   
