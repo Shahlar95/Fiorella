@@ -1,7 +1,3 @@
 {
-    "build": {
-      "src": "/src",
-      "dest": "/public"
-    }
+    "buildCommand": "next build"
   }
-  
