@@ -1,6 +1,7 @@
 {
-    
-    "public": "true",
-    "src": "true"
+    "build": {
+      "src": "/src",
+      "dest": "/public"
+    }
   }
   
